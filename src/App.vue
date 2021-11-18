@@ -100,7 +100,7 @@
                   <span class="dep__time">23:25</span>
                 </div>
                 <div class="route__details details">
-                  <div class="details__line">
+                  <div class="details__arrow">
                     <span class="details__dep">
                       ALA
                     </span>
@@ -110,6 +110,11 @@
                     <span class="details__arr">
                       TSE
                     </span>
+                  </div>
+                  <div class="details__line">
+                    <div class="details__dot details__dot--first"></div>
+                    <div class="details__dot details__dot--second"></div>
+                    <div class="details__dot details__dot--third"></div>
                   </div>
                   <span class="details__info">
                     через Шымкент, 1 ч 50 м

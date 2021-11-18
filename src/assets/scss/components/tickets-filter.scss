@@ -58,6 +58,7 @@
         z-index: $layer-1;
 
         &:before {
+            display: none;
             content: '';
             position: absolute;
             left: spacer(-3);

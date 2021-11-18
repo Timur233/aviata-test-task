@@ -18,7 +18,7 @@ $font-small: 12px;
 $font-normal: 14px;
 $font-middle: 16px;
 $font-large: 18px;
-$font-big: 26px;
+$font-big: 24px;
 
 @mixin font ($fs: 14px, $lh: 1, $fw: 400) {
     font-size: $fs;

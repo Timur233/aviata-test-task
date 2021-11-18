@@ -19,6 +19,10 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+
+    &__route {
+        margin: auto;
+    }
 }
 
 .route {
@@ -38,6 +42,7 @@
     
     &__logo {
         height: 20px;
+        margin-right: spacer(3);
     }
 
     &__title {
@@ -48,6 +53,8 @@
 .dep, .arr {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
+    text-align: center;
 
     &__date {
         @include font($font-small, 1, 400);
@@ -61,17 +68,50 @@
 .details {
     margin: auto;
 
-    &__line {
+    &__arrow {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: spacer(2);
+        margin-bottom: spacer(1);
     }
 
     &__dep, &__arr {
         @include font($font-small, 1, 400);
 
         color: $gray;
+    }
+
+    &__line {
+        display: block;
+        position: relative;
+        height: 1px;
+        background-color: $gray;
+        margin-bottom: spacer(1);
+    }
+
+    &__dot {
+        display: inline-block;
+        position: absolute;
+        height: 5px;
+        width: 5px;
+        border: 1px solid $gray;
+        background-color: $white;
+        border-radius: 50%;
+
+        &--first {
+            top: -2px;
+            left: 0px;
+        }
+
+        &--second {
+            top: -2px;
+            left: calc(50% - 2px);
+        }
+
+        &--third {
+            top: -2px;
+            right: 0px;
+        }
     }
 
     &__info {
@@ -95,7 +135,7 @@
     background-color: $bg-attractive;
 
     &__price {
-        @include font($font-big, 1, 400);
+        @include font($font-big, 30px, 400);
 
         width: 100%;
         text-align: center;
@@ -117,7 +157,7 @@
     }
 
     &__price-info {
-        @include font($font-small, 1, 400);
+        @include font($font-small, 16px, 400);
 
         color: $text-light;
         text-align: center;
@@ -134,6 +174,8 @@
 
     &__button {
         @include font($font-small, 1, 400);
+
+        padding: spacer(1) spacer(2);
     }
 
     &__weight {
