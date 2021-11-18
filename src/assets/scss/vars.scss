@@ -1,0 +1,43 @@
+//colors
+$white: #fff;
+$gray: #B9B9B9;
+$gray-light: #EBEBEB;
+$bg-color: #E1E1E1;
+$bg-attractive: #F5F5F5;
+$text-dark: #202123;
+$text-light: #707276;
+$butt-blue: #7284E4;
+
+//fonts
+$font-small: 12px;
+$font-normal: 14px;
+$font-middle: 16px;
+$font-large: 20px;
+$font-big: 24px;
+
+@mixin font ($fs: 14px, $lh: 1, $fw: 400) {
+    font-size: $fs;
+    line-height: $lh;
+    font-weight: $fw;
+}
+
+//transition
+$slow-animation: 0.24s;
+$midd-animation: 0.18s;
+$fast-animation: 0.16s;
+
+//z-index
+$layer--1: -1;
+$layer-0: 0;
+$layer-1: 1;
+$layer-2: 2;
+
+//space
+@function spacer($factor: 1) {
+    @return 4px * $factor;
+}
+
+//knee
+@function softer($factor: 1) {
+    @return 2px * $factor;
+}

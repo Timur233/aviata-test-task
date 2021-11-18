@@ -1,6 +1,18 @@
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
 .grid {
     display: flex;
+    flex-wrap: wrap;
+
     &__col-3 {
-        
+        width: 25%;
+    }
+
+    &__col-9 {
+        width: 75%;
+        background-color: aquamarine;
     }
 }

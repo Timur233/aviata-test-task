@@ -1,0 +1,100 @@
+.tickets-filter {
+    background-color: $bg-attractive;
+    padding: spacer(3);
+    border-radius: softer(2);
+
+    &__title-block {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: spacer(3);
+    }
+
+    &__title {
+        @include font($font-normal, 1, 700);
+    }
+
+    &__clear-button {
+        background: none;
+        cursor: pointer;
+    }
+
+    &__clear-button:hover > svg > path {
+        fill: #7284E4;
+        transition: $midd-animation all;
+    }
+
+}
+
+.tickets-filter-clear {
+    @include font($font-small);
+
+    cursor: pointer;
+    position: relative;
+    color: $butt-blue;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -1px;
+        height: 1px;
+        width: 100%;
+        opacity: .5;
+        border-bottom: 1px dashed;
+    }
+}
+
+.options-list {
+    max-height: 256px;
+    overflow: auto;
+    
+
+    &__item {
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: $layer-1;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: spacer(-3);
+            right: spacer(-3);
+            height: 100%;
+            background: $gray-light;
+            z-index: $layer--1;
+            opacity: 0;
+            transition: $fast-animation opacity;
+        }
+
+        &:hover:before {
+            opacity: 1;
+        }
+    }
+    
+    &__checkbox {
+        margin-right: spacer(3);
+    }
+
+    &__label {
+        @include font($font-small, 1.4);
+
+        padding: spacer(2) 0;
+        flex-grow: 1;
+    }
+
+    &::-webkit-scrollbar {
+        width: 2px;
+        margin-right: 20px;
+    }
+      
+    &::-webkit-scrollbar-track {
+    }
+    
+    &::-webkit-scrollbar-thumb {
+    background: $bg-color;
+    border-radius: 2px;
+    }
+}
