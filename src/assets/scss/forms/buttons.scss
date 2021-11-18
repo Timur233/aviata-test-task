@@ -1,0 +1,45 @@
+.button {
+    @include font($font-normal, 1.5, 400);
+
+    display: inline-block;
+    color: $text-dark;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: spacer(1) spacer(4);
+    border-radius: softer(2);
+    transition: $midd-animation all;
+
+    &:hover {
+        background-color: $gray-light;
+        border-color: $gray-light;
+    }
+
+    &__primary {
+        background-color: $primary;
+        border-color: $primary;
+        color: $white;
+
+        &:hover {
+            background-color: rgba($primary, .7);
+            border-color: rgba($primary, .7);
+        }
+    }
+
+    &__light {
+        background-color: $blue-light;
+        border-color: $blue-light;
+        color: $blue;
+
+        &:hover {
+            background-color: $blue;
+            border-color: $blue;
+            color: $white;
+        }
+    }
+}

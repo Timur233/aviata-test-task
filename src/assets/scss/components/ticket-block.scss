@@ -1,0 +1,143 @@
+.ticket-block {
+    display: flex;
+    background-color: $white;
+    border-radius: softer(2);
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba($black, 0.15);
+
+    &__info {
+        flex-grow: 1;
+        padding: spacer(5) spacer(11);
+    }
+
+    &__offer {
+        width: 27%;
+    }
+}
+
+.ticket-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.route {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.links {
+    display: flex;
+}
+
+.airline {
+    display: flex;
+    align-items: center;
+    margin-right: spacer(7);
+    
+    &__logo {
+        height: 20px;
+    }
+
+    &__title {
+        @include font($font-normal, 19px, 600);
+    }
+}
+
+.dep, .arr {
+    display: flex;
+    flex-direction: column;
+
+    &__date {
+        @include font($font-small, 1, 400);
+    }
+
+    &__time {
+        @include font($font-big, 1, 600);
+    }
+}
+
+.details {
+    margin: auto;
+
+    &__line {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: spacer(2);
+    }
+
+    &__dep, &__arr {
+        @include font($font-small, 1, 400);
+
+        color: $gray;
+    }
+
+    &__info {
+        @include font($font-small, 1, 400);
+
+        color: $warning;
+        display: block;
+        width: 100%;
+    }
+}
+
+.links {
+    display: flex;
+    align-items: center;
+}
+
+.ticket-offer {
+    display: flex;
+    flex-direction: column;
+    padding: spacer(3) spacer(5);
+    background-color: $bg-attractive;
+
+    &__price {
+        @include font($font-big, 1, 400);
+
+        width: 100%;
+        text-align: center;
+        margin-bottom: spacer(3);
+    }
+
+    &__curr {
+        @include font($font-large);
+
+        text-transform: lowercase;
+    }
+
+    &__button {
+        @include font($font-large, 1.25, 700);
+
+        width: 100%;
+        padding: spacer(2);
+        margin-bottom: spacer(2);
+    }
+
+    &__price-info {
+        @include font($font-small, 1, 400);
+
+        color: $text-light;
+        text-align: center;
+        margin-bottom: spacer(3);
+    }
+}
+
+.baggage {
+    @include font($font-small, 1, 400);
+
+    display: flex;
+    align-items: center;
+    gap: spacer(2);
+
+    &__button {
+        @include font($font-small, 1, 400);
+    }
+
+    &__weight {
+        flex-grow: 1;
+        text-align: center;
+    }
+}

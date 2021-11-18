@@ -1,5 +1,6 @@
 //colors
 $white: #fff;
+$black: #000;
 $gray: #B9B9B9;
 $gray-light: #EBEBEB;
 $bg-color: #E1E1E1;
@@ -7,13 +8,17 @@ $bg-attractive: #F5F5F5;
 $text-dark: #202123;
 $text-light: #707276;
 $butt-blue: #7284E4;
+$blue: #5763B3;
+$blue-light: #EAF0FA;
+$primary: #55BB06;
+$warning: #FF9900;
 
 //fonts
 $font-small: 12px;
 $font-normal: 14px;
 $font-middle: 16px;
-$font-large: 20px;
-$font-big: 24px;
+$font-large: 18px;
+$font-big: 26px;
 
 @mixin font ($fs: 14px, $lh: 1, $fw: 400) {
     font-size: $fs;
