@@ -1,3 +1,9 @@
+.tickets-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: spacer(3);
+}
+
 .ticket-block {
     display: flex;
     background-color: $white;
@@ -13,6 +19,13 @@
     &__offer {
         width: 27%;
     }
+}
+
+.flights-not-found {
+    @include font ($font-small, 1, 500);
+
+    padding: spacer(6);
+    text-align: center;
 }
 
 .ticket-info {
@@ -62,6 +75,12 @@
 
     &__time {
         @include font($font-big, 1, 600);
+    }
+
+    &__red {
+        position: absolute;
+        color: rgba(#FF3724, .8);
+        margin-left: 4px;
     }
 }
 

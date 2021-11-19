@@ -99,3 +99,25 @@
     border-radius: 2px;
     }
 }
+
+.popover {
+    position: absolute;
+    transform: translate(calc(-50% + 7px), calc(-100% - 7px));
+    padding: 12px;
+    border-radius: 6px;
+    background: $white;
+    border: 1px solid $bg-color;
+}
+
+.popover:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -1px;
+    transform: translate(-50%, 50%) rotate(45deg);
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    border-right: 1px solid $bg-color;
+    border-bottom: 1px solid $bg-color;
+ }
