@@ -8,24 +8,28 @@ export default new Vuex.Store({
   state: {
     airlines: data.airlines,
     flights: data.flights,
-    filteredFlights: data.flights
+    filteredFlights: data.flights,
+    filterByTarif: [],
+    filterByAirlines: []
   },
   mutations: {
-    filterByAirlines (state, payload) {
+    filterByAirlines (state) {
       state.filteredFlights = state.flights.filter((flight) => {
-        return payload.includes(flight.validating_carrier) ? flight : ''
+        if (this.state.filterByAirlines.length !== 0) { return this.state.filterByAirlines.includes(flight.validating_carrier) ? flight : '' }
       })
     },
-    filterByTarif (state, payload) {
-      console.log(payload)
+    filterByTarif (state) {
       state.filteredFlights = state.flights.filter((flight) => {
-        return payload.includes(flight.validating_carrier) ? flight : ''
+        if (this.state.filterByTarif.length !== 0) { return this.state.filterByTarif.includes(flight.validating_carrier) ? flight : '' }
       })
     }
   },
   actions: {
     filterFlights ({ commit }, payload) {
-      commit(payload.mutation, payload.values)
+      this.state[payload.mutation] = payload.values
+
+      commit('filterByAirlines')
+      commit('filterByTarif')
     }
   },
   modules: {
